@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Enhanced HTML5 Page with Form</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+      line-height: 1.6;
+    }
+    header, main, footer {
+      margin-bottom: 30px;
+    }
+    table {
+      width: 80%;
+      border-collapse: collapse;
+      margin: 15px 0;
+    }
+    table, th, td {
+      border: 1px solid #333;
+    }
+    th, td {
+      padding: 10px;
+      text-align: left;
+    }
+    fieldset {
+      margin-bottom: 20px;
+      padding: 15px;
+      border: 1px solid #999;
+      border-radius: 5px;
+    }
+    legend {
+      font-weight: bold;
+    }
+    label {
+      display: block;
+      margin-top: 10px;
+    }
+    input, select, textarea, button {
+      margin-top: 5px;
+      padding: 8px;
+      width: 100%;
+      max-width: 400px;
+      box-sizing: border-box;
+    }
+    button {
+      background: #0066cc;
+      color: white;
+      border: none;
+      cursor: pointer;
+      border-radius: 4px;
+    }
+    button:hover {
+      background: #004d99;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Welcome to My Enhanced HTML5 Page</h1>
+    <p>This page demonstrates the use of lists, tables, media, and advanced HTML5 forms with validation.</p>
+  </header>
+
+  <main>
+    <!-- Lists Section -->
+    <section>
+      <h2>My Favorite Technologies</h2>
+      <ul>
+        <li>HTML5</li>
+        <li>CSS3</li>
+        <li>JavaScript</li>
+        <li>Python</li>
+        <li>Machine Learning</li>
+      </ul>
+    </section>
+
+    <!-- Table Section -->
+    <section>
+      <h2>Course Schedule</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Day</th>
+            <th>Course</th>
+            <th>Time</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Monday</td>
+            <td>Web Development</td>
+            <td>10:00 - 12:00</td>
+          </tr>
+          <tr>
+            <td>Wednesday</td>
+            <td>Database Systems</td>
+            <td>1:00 - 3:00</td>
+          </tr>
+          <tr>
+            <td>Friday</td>
+            <td>Machine Learning</td>
+            <td>2:00 - 4:00</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- Media Section -->
+    <section>
+      <h2>Featured Media</h2>
+      <figure>
+        <img src="https://via.placeholder.com/400x200" alt="Sample Image">
+        <figcaption>Sample Placeholder Image</figcaption>
+      </figure>
+      <audio controls>
+        <source src="https://www.w3schools.com/html/horse.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+      </audio>
+      <video controls width="400">
+        <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </section>
+
+    <!-- Form Section -->
+    <section>
+      <h2>Registration Form</h2>
+      <form action="#" method="post">
+        <!-- Personal Information -->
+        <fieldset>
+          <legend>Personal Information</legend>
+          <label for="fullname">Full Name:</label>
+          <input type="text" id="fullname" name="fullname" placeholder="John Doe" required minlength="3">
+
+          <label for="email">Email Address:</label>
+          <input type="email" id="email" name="email" placeholder="example@email.com" required>
+
+          <label for="phone">Phone Number:</label>
+          <input type="tel" id="phone" name="phone" placeholder="+1234567890" pattern="^\+?\d{10,15}$" required>
+
+          <label for="dob">Date of Birth:</label>
+          <input type="date" id="dob" name="dob" required>
+        </fieldset>
+
+        <!-- Account Information -->
+        <fieldset>
+          <legend>Account Information</legend>
+          <label for="username">Username:</label>
+          <input type="text" id="username" name="username" placeholder="Username" required minlength="5">
+
+          <label for="password">Password:</label>
+          <input type="password" id="password" name="password" required minlength="6">
+
+          <label for="confirm-password">Confirm Password:</label>
+          <input type="password" id="confirm-password" name="confirm-password" required minlength="6">
+        </fieldset>
+
+        <!-- Preferences -->
+        <fieldset>
+          <legend>Preferences</legend>
+          <label for="gender">Gender:</label>
+          <select id="gender" name="gender" required>
+            <option value="">--Select--</option>
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+            <option value="nonbinary">Non-binary</option>
+            <option value="prefernot">Prefer not to say</option>
+          </select>
+
+          <label for="bio">Short Bio:</label>
+          <textarea id="bio" name="bio" rows="4" placeholder="Tell us something about yourself..." minlength="10"></textarea>
+
+          <label>
+            <input type="checkbox" name="terms" required>
+            I agree to the Terms and Conditions
+          </label>
+        </fieldset>
+
+        <button type="submit">Register</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Enhanced HTML5 Page. All rights reserved.</p>
+  </footer>
+</body>
+</html>
